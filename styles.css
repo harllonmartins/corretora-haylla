@@ -299,10 +299,10 @@ img {
    ========================================================================== */
 .hero {
     position: relative;
-    padding: 120px 0 80px;
-    min-height: 100vh;
+    margin-top: 80px; /* Margem em cima pedida */
+    padding: 40px 0 0; /* Sem padding embaixo para acompanhar a foto */
     display: flex;
-    align-items: center;
+    align-items: flex-end; /* Alinha o container na base */
     overflow: hidden;
     background: linear-gradient(180deg, #f0fdfa 0%, #ffffff 100%);
 }
@@ -347,7 +347,7 @@ img {
     display: grid;
     grid-template-columns: 1fr;
     gap: var(--spacing-3xl);
-    align-items: center;
+    align-items: end; /* Alinha o conteúdo da grid embaixo */
 }
 
 @media (min-width: 992px) {
@@ -358,6 +358,7 @@ img {
 
 .hero-content {
     max-width: 600px;
+    padding-bottom: 40px; /* Adiciona um respiro para o texto já que o container está alinhado abaixo */
 }
 
 .badge {
@@ -417,11 +418,12 @@ img {
 }
 
 .hero-person-img {
-    max-width: 100%;
+    width: 100%; /* Ocupa toda a largura da coluna para ficar maior */
+    max-width: 800px; 
     height: auto;
-    max-height: 600px;
     z-index: 1;
     position: relative;
+    display: block;
 }
 
 .floating-card {
